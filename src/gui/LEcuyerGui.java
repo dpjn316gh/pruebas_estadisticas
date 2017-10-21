@@ -4,9 +4,15 @@
  * and open the template in the editor.
  */
 package gui;
+
+import estadisticas.metodos.ChiCuadrado;
 import generadores.LEcuyer;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import javax.naming.OperationNotSupportedException;
 import menu.Menu_Generadores;
+
 /**
  *
  * @author Verónica Cortes / Jazmin Patiño
@@ -14,6 +20,7 @@ import menu.Menu_Generadores;
 public class LEcuyerGui extends javax.swing.JFrame {
 
     private LEcuyer p = new LEcuyer();
+
     /**
      * Creates new form LEcuyerGui
      */
@@ -48,7 +55,7 @@ public class LEcuyerGui extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        jTextFieldIteraciones1 = new javax.swing.JTextField();
+        jTextFieldITolerancia = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaResultado1 = new javax.swing.JTextArea();
@@ -131,7 +138,7 @@ public class LEcuyerGui extends javax.swing.JFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                         .addComponent(jLabel9)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextFieldIteraciones1))
+                                        .addComponent(jTextFieldITolerancia))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                         .addComponent(jButton3)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -216,7 +223,7 @@ public class LEcuyerGui extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextFieldIteraciones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldITolerancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -249,7 +256,7 @@ public class LEcuyerGui extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Menu_Generadores Volver  = new Menu_Generadores();
+        Menu_Generadores Volver = new Menu_Generadores();
         Volver.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -259,6 +266,16 @@ public class LEcuyerGui extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+
+        List<BigDecimal> list = new ArrayList<>();
+        for (int i = 0; i < p.numerosAleatorio.size(); i++) {
+            double numero = p.numerosAleatorio.get(i);
+            list.add(new BigDecimal(numero));
+        }
+
+        Double tolerancia = new Double(jTextFieldITolerancia.getText());
+        
+        jTextAreaResultado1.setText(ChiCuadrado.probar(list, 1, tolerancia));
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -315,8 +332,8 @@ public class LEcuyerGui extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextArea jTextAreaResultado;
     private javax.swing.JTextArea jTextAreaResultado1;
+    private javax.swing.JTextField jTextFieldITolerancia;
     private javax.swing.JTextField jTextFieldIteraciones;
-    private javax.swing.JTextField jTextFieldIteraciones1;
     private javax.swing.JTextField jTextFieldSemilla;
     private javax.swing.JTextField jTextFieldSemilla1;
     // End of variables declaration//GEN-END:variables

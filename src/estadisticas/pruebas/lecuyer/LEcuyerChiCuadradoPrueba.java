@@ -31,6 +31,6 @@ public class LEcuyerChiCuadradoPrueba {
             list.add(new BigDecimal(numero));
         }
         
-        ChiCuadrado.probar(list, 1, 0.05);
+        System.out.println(ChiCuadrado.probar(list, 1, 0.05));
     }
 }

@@ -19,7 +19,9 @@ import org.apache.commons.math3.stat.inference.TestUtils;
  */
 public class ChiCuadrado {
 
-    public static void probar(List<BigDecimal> list, int limiteSuperior, double confianza) {
+    public static String probar(List<BigDecimal> list, int limiteSuperior, double confianza) {
+
+        StringBuilder resultado = new StringBuilder();
 
         Collections.sort(list);
 
@@ -50,7 +52,7 @@ public class ChiCuadrado {
         for (Map.Entry<BigDecimal, Long> entry : clases.entrySet()) {
             BigDecimal key = entry.getKey();
             Long value = entry.getValue();
-            System.out.println(String.format("%f %d", key.doubleValue(), value));
+            resultado.append(String.format("%f %d\n", key.doubleValue(), value));
         }
 
         List<Long> frecuenciaLista = new ArrayList<>(clases.values());
@@ -61,10 +63,10 @@ public class ChiCuadrado {
             expected[i] = E;
         }
 
-        
-        System.out.println(String.format("N:%d. Raiz(n):%f E:%f Intervalo clase:%f", n, m, E, intervaloClase));
-        System.out.println(TestUtils.chiSquare(expected, observed));
-        System.out.println(TestUtils.chiSquareTest(expected, observed));
-        System.out.println(String.format("Rechazar prueba: %s", TestUtils.chiSquareTest(expected, observed, confianza)));
+        resultado.append(String.format("N:%d. Raiz(n):%f E:%f Intervalo clase:%f\n", n, m, E, intervaloClase));
+        resultado.append(String.format("%f\n", TestUtils.chiSquare(expected, observed)));
+        resultado.append(String.format("%f\n", TestUtils.chiSquareTest(expected, observed)));
+        resultado.append(String.format("Rechazar prueba: %s\n", TestUtils.chiSquareTest(expected, observed, confianza)));
+        return resultado.toString();
     }
 }
