@@ -3,16 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pruebas.estadisticas.probador;
+package estadisticas.metodos;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import org.apache.commons.math3.stat.inference.TestUtils;
 
 /**
  *

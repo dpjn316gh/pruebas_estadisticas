@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pruebas.estadisticas;
+package estadisticas.pruebas.congruencial;
 
-import pruebas.estadisticas.probador.ChiCuadrado;
+import estadisticas.metodos.ChiCuadrado;
 import generadores.CongruencialMixto;
 import generadores.LEcuyer;
 import java.math.BigDecimal;

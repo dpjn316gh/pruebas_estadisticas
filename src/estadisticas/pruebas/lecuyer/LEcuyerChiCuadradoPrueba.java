@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pruebas.estadisticas;
+package estadisticas.pruebas.lecuyer;
 
-import pruebas.estadisticas.probador.ChiCuadrado;
+import estadisticas.metodos.ChiCuadrado;
 import generadores.LEcuyer;
 import java.math.BigDecimal;
 import java.util.ArrayList;

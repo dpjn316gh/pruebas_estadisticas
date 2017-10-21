@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pruebas.estadisticas.probador;
+package estadisticas.metodos;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -61,7 +61,7 @@ public class ChiCuadrado {
             expected[i] = E;
         }
 
-        //TestUtils.
+        
         System.out.println(String.format("N:%d. Raiz(n):%f E:%f Intervalo clase:%f", n, m, E, intervaloClase));
         System.out.println(TestUtils.chiSquare(expected, observed));
         System.out.println(TestUtils.chiSquareTest(expected, observed));

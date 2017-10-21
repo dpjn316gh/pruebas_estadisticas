@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pruebas.estadisticas;
+package estadisticas.pruebas.fibonacci;
 
-import pruebas.estadisticas.probador.ChiCuadrado;
+import estadisticas.metodos.ChiCuadrado;
 import generadores.Fibonacci;
 import generadores.LEcuyer;
 import java.math.BigDecimal;
