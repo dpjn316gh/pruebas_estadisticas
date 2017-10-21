@@ -58,7 +58,7 @@ public class WichmannyHillGui extends javax.swing.JFrame {
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextAreaResultado1 = new javax.swing.JTextArea();
         jLabel10 = new javax.swing.JLabel();
-        jTextFieldIteraciones2 = new javax.swing.JTextField();
+        jTextFieldITolerancia = new javax.swing.JTextField();
         jLabelResultado2 = new javax.swing.JLabel();
 
         jButton2.setText("Volver");
@@ -195,7 +195,7 @@ public class WichmannyHillGui extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel10)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextFieldIteraciones2, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextFieldITolerancia, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(32, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,7 +244,7 @@ public class WichmannyHillGui extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextFieldIteraciones2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldITolerancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelResultado2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -353,9 +353,9 @@ public class WichmannyHillGui extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTextArea jTextAreaResultado;
     private javax.swing.JTextArea jTextAreaResultado1;
+    private javax.swing.JTextField jTextFieldITolerancia;
     private javax.swing.JTextField jTextFieldIteraciones;
     private javax.swing.JTextField jTextFieldIteraciones1;
-    private javax.swing.JTextField jTextFieldIteraciones2;
     private javax.swing.JTextField jTextFieldSemilla;
     private javax.swing.JTextField jTextFieldSemilla1;
     private javax.swing.JTextField jTextFieldSemilla2;
