@@ -5,6 +5,7 @@
  */
 package gui;
 
+import estadisticas.metodos.ChiCuadrado;
 import generadores.Fibonacci;
 import javax.naming.OperationNotSupportedException;
 import menu.Menu_Generadores;
@@ -58,7 +59,7 @@ public class FibonacciGui extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextFieldIteraciones1 = new javax.swing.JTextField();
+        jTextFieldITolerancia = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
@@ -197,7 +198,7 @@ public class FibonacciGui extends javax.swing.JFrame {
                                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                                         .addComponent(jLabel9)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(jTextFieldIteraciones1))
+                                                        .addComponent(jTextFieldITolerancia))
                                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                                         .addComponent(jButton2)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -255,7 +256,7 @@ public class FibonacciGui extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextFieldIteraciones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldITolerancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -309,6 +310,7 @@ public class FibonacciGui extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        //ChiCuadrado.probar(list, 1, 0.05);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -383,8 +385,8 @@ public class FibonacciGui extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextAreaResultado;
     private javax.swing.JTextArea jTextAreaResultado1;
+    private javax.swing.JTextField jTextFieldITolerancia;
     private javax.swing.JTextField jTextFieldIteraciones;
-    private javax.swing.JTextField jTextFieldIteraciones1;
     private javax.swing.JTextField jTextFieldModulus;
     private javax.swing.JTextField jTextFieldN0;
     private javax.swing.JTextField jTextFieldN1;

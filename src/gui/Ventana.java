@@ -59,7 +59,7 @@ public class Ventana extends javax.swing.JFrame {
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
-        jTextFieldIteraciones2 = new javax.swing.JTextField();
+        jTextFieldITolerancia = new javax.swing.JTextField();
         jLabelResultado2 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextAreaResultado1 = new javax.swing.JTextArea();
@@ -166,7 +166,7 @@ public class Ventana extends javax.swing.JFrame {
                             .addGroup(jPanelGeneradorBasicoLayout.createSequentialGroup()
                                 .addComponent(jLabel10)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextFieldIteraciones2, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jTextFieldITolerancia, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanelGeneradorBasicoLayout.createSequentialGroup()
                                 .addGap(189, 189, 189)
                                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -243,7 +243,7 @@ public class Ventana extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelGeneradorBasicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextFieldIteraciones2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldITolerancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelResultado2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -386,9 +386,9 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextAreaFuncionTransicion;
     private javax.swing.JTextArea jTextAreaResultado;
     private javax.swing.JTextArea jTextAreaResultado1;
+    private javax.swing.JTextField jTextFieldITolerancia;
     private javax.swing.JTextField jTextFieldIteraciones;
     private javax.swing.JTextField jTextFieldIteraciones1;
-    private javax.swing.JTextField jTextFieldIteraciones2;
     private javax.swing.JTextField jTextFieldSemilla;
     // End of variables declaration//GEN-END:variables
 }

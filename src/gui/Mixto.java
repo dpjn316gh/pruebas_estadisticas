@@ -63,7 +63,7 @@ public class Mixto extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jButton14 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        jTextFieldIteraciones1 = new javax.swing.JTextField();
+        jTextFieldITolerancia = new javax.swing.JTextField();
 
         jButton6.setText("Promedio");
         jButton6.setActionCommand("jButton2 ");
@@ -203,7 +203,7 @@ public class Mixto extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel9)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextFieldIteraciones1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextFieldITolerancia, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                     .addComponent(jButton10)
                                     .addGap(2, 2, 2)
@@ -267,7 +267,7 @@ public class Mixto extends javax.swing.JFrame {
                 .addGap(11, 11, 11)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextFieldIteraciones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldITolerancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelResultado1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -385,8 +385,8 @@ public class Mixto extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTextArea jTextAreaResultado;
     private javax.swing.JTextArea jTextAreaResultado1;
+    private javax.swing.JTextField jTextFieldITolerancia;
     private javax.swing.JTextField jTextFieldIteraciones;
-    private javax.swing.JTextField jTextFieldIteraciones1;
     private javax.swing.JTextField jTextFieldSemilla;
     private javax.swing.JTextField jTextFieldSemilla1;
     private javax.swing.JTextField jTextFieldSemilla2;

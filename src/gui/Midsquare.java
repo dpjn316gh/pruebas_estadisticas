@@ -55,7 +55,7 @@ public class Midsquare extends javax.swing.JFrame {
         jTextAreaResultado1 = new javax.swing.JTextArea();
         jLabelResultado2 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextFieldIteraciones1 = new javax.swing.JTextField();
+        jTextFieldITolerancia = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
@@ -185,7 +185,7 @@ public class Midsquare extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldIteraciones1)
+                        .addComponent(jTextFieldITolerancia)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabelResultado2)
@@ -236,7 +236,7 @@ public class Midsquare extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextFieldIteraciones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldITolerancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelResultado2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -356,8 +356,8 @@ public class Midsquare extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTextArea jTextAreaResultado;
     private javax.swing.JTextArea jTextAreaResultado1;
+    private javax.swing.JTextField jTextFieldITolerancia;
     private javax.swing.JTextField jTextFieldIteraciones;
-    private javax.swing.JTextField jTextFieldIteraciones1;
     private javax.swing.JTextField jTextFieldSemilla;
     // End of variables declaration//GEN-END:variables
 }
