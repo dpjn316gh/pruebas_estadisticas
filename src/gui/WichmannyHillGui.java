@@ -96,7 +96,6 @@ public class WichmannyHillGui extends javax.swing.JFrame {
         jTextFieldSemilla2.setName("semillaZ"); // NOI18N
 
         jButton3.setText("Exit");
-        jButton3.setActionCommand("Exit");
         jButton3.setName("volver"); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +190,8 @@ public class WichmannyHillGui extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel10)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextFieldITolerancia, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextFieldITolerancia, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(61, 61, 61))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jButton10)
                                     .addGap(2, 2, 2)
