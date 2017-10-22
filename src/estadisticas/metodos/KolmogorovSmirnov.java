@@ -16,7 +16,9 @@ import jsc.goodnessfit.KolmogorovCB;
  */
 public class KolmogorovSmirnov {
         
-    public static void probar(List<BigDecimal> list, int limiteSuperior, double confianza) {
+    public static String probar(List<BigDecimal> list, double confianza) {
+        
+        StringBuilder resultado = new StringBuilder();
         
         Collections.sort(list);
 
@@ -36,9 +38,11 @@ public class KolmogorovSmirnov {
         
         double valTable = KolmogorovCB.approxCriticalValue(n, confianza);
                
-        System.out.println(String.format("Max %f", max));
-        System.out.println(String.format("K valor %f", valTable));
-        System.out.println(String.format("Rechazar prueba: %s", max >= valTable));                       
+        resultado.append(String.format("Max %f\n", max));
+        resultado.append(String.format("K valor %f\n", valTable));
+        resultado.append(String.format("Rechazar prueba: %s\n", max >= valTable));
+        
+        return resultado.toString();
     }
 }
 
