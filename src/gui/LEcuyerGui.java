@@ -7,6 +7,7 @@ package gui;
 
 import estadisticas.metodos.ChiCuadrado;
 import estadisticas.metodos.KolmogorovSmirnov;
+import estadisticas.metodos.VarianzaPrueba;
 import generadores.LEcuyer;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -305,6 +306,15 @@ public class LEcuyerGui extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+         List<BigDecimal> list = new ArrayList<>();
+        for (int i = 0; i < p.numerosAleatorio.size(); i++) {
+            double numero = p.numerosAleatorio.get(i);
+            list.add(new BigDecimal(numero));
+        }
+
+        Double tolerancia = new Double(jTextFieldITolerancia.getText());
+        
+        jTextAreaResultado1.setText(VarianzaPrueba.probar(list, tolerancia));
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
