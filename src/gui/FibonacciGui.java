@@ -7,6 +7,9 @@ package gui;
 
 import estadisticas.metodos.ChiCuadrado;
 import generadores.Fibonacci;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import javax.naming.OperationNotSupportedException;
 import menu.Menu_Generadores;
 
@@ -307,7 +310,16 @@ public class FibonacciGui extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        //ChiCuadrado.probar(list, 1, 0.05);
+         List<BigDecimal> list = new ArrayList<>();
+        for (int i = 0; i < p.numerosAleatorios.size(); i++) {
+            double numero = p.numerosAleatorios.get(i);
+            list.add(new BigDecimal(numero));
+        }
+
+        Double tolerancia = new Double(jTextFieldITolerancia.getText());
+        
+        jTextAreaResultado1.setText(ChiCuadrado.probar(list, 1, tolerancia));
+                                         
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
