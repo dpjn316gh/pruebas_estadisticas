@@ -6,6 +6,7 @@
 package gui;
 
 import estadisticas.metodos.ChiCuadrado;
+import estadisticas.metodos.KolmogorovSmirnov;
 import generadores.MidsquareMethod;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -129,6 +130,11 @@ public class Midsquare extends javax.swing.JFrame {
         jButton12.setText("Varianza");
 
         jButton13.setText("Kolmogorov-Smirnov");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         jTextAreaResultado1.setColumns(20);
         jTextAreaResultado1.setRows(5);
@@ -290,6 +296,21 @@ public class Midsquare extends javax.swing.JFrame {
         Menu_Generadores Volver  = new Menu_Generadores();
         Volver.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+             List<BigDecimal> list = new ArrayList<>();
+        for (int i = 0; i < p.numerosAleatorios.size(); i++) {
+            double numero = p.numerosAleatorios.get(i);
+            list.add(new BigDecimal(numero));
+        }
+
+        Double tolerancia = new Double(jTextFieldITolerancia.getText());
+        
+        jTextAreaResultado1.setText(KolmogorovSmirnov.probar(list, tolerancia));
+   
+        
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments

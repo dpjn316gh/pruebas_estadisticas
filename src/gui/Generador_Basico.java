@@ -127,6 +127,11 @@ public class Generador_Basico extends javax.swing.JFrame {
         jButton12.setText("Varianza");
 
         jButton13.setText("Kolmogorov-Smirnov");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         jLabel10.setText("Tolerancia");
 
@@ -324,6 +329,10 @@ public class Generador_Basico extends javax.swing.JFrame {
         Menu_Generadores Volver  = new Menu_Generadores();
         Volver.setVisible(true);
     }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments

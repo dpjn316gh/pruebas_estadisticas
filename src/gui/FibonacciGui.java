@@ -6,6 +6,7 @@
 package gui;
 
 import estadisticas.metodos.ChiCuadrado;
+import estadisticas.metodos.KolmogorovSmirnov;
 import generadores.Fibonacci;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -122,6 +123,11 @@ public class FibonacciGui extends javax.swing.JFrame {
         jButton4.setText("Varianza");
 
         jButton5.setText("Kolmogorov-Smirnov");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jTextAreaResultado1.setColumns(20);
         jTextAreaResultado1.setRows(5);
@@ -329,6 +335,19 @@ public class FibonacciGui extends javax.swing.JFrame {
         Menu_Generadores Volver  = new Menu_Generadores();
         Volver.setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        List<BigDecimal> list = new ArrayList<>();
+        for (int i = 0; i < p.numerosAleatorio.size(); i++) {
+            double numero = p.numerosAleatorio.get(i);
+            list.add(new BigDecimal(numero));
+        }
+
+        Double tolerancia = new Double(jTextFieldITolerancia.getText());
+       
+        jTextAreaResultado1.setText(KolmogorovSmirnov.probar(list, tolerancia));
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
