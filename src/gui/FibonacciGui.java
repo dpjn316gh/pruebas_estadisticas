@@ -309,7 +309,7 @@ public class FibonacciGui extends javax.swing.JFrame {
          List<BigDecimal> list = new ArrayList<>();
         for (int i = 0; i < p.numerosAleatorios.size(); i++) {
             double numero = p.numerosAleatorios.get(i);
-            list.add(new BigDecimal(numero));
+            list.add(new BigDecimal(numero / 10000000));
         }
 
         Double tolerancia = new Double(jTextFieldITolerancia.getText());
