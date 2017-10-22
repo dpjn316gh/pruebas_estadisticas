@@ -8,6 +8,10 @@ package generadores;
 import generadores.matematica.ExpresionMatematicaUnaVariable;
 import java.util.ArrayList;
 
+/**
+ * 
+ * @author Vero
+ */
 public class MetodoInicial {
 
     // Función 
