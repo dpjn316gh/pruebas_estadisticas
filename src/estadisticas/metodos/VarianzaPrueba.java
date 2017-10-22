@@ -15,8 +15,10 @@ import org.apache.commons.math3.stat.descriptive.moment.Variance;
  */
 public class VarianzaPrueba {
 
-    public static void probar(List<BigDecimal> list, double confianza) {
+    public static String probar(List<BigDecimal> list, double confianza) {
 
+        StringBuilder sb = new StringBuilder();
+        
         double[] valores = new double[list.size()];
         for (int i = 0; i < list.size(); i++) {
             BigDecimal get = list.get(i);
@@ -35,9 +37,9 @@ public class VarianzaPrueba {
         double limIzq = chi2izq / (12 * (n - 1));
         double limDer = chi2der / (12 * (n - 1));
 
-        System.out.println(String.format("Varianza %f", varianza));
-        System.out.println(String.format("chi2izq=%f, chi2der=%f", chi2izq, chi2der));
-        System.out.println(String.format("LimIzq=%f, LimDer=%f", limIzq, limDer));
+        sb.append(String.format("Varianza %f\n", varianza));
+        sb.append(String.format("chi2izq=%f, chi2der=%f\n", chi2izq, chi2der));
+        sb.append(String.format("LimIzq=%f, LimDer=%f\n", limIzq, limDer));
         
         if (limIzq > limDer){
             double t = limIzq;
@@ -46,9 +48,11 @@ public class VarianzaPrueba {
         }
 
         if (varianza > limIzq && varianza < limDer) {
-            System.out.println(String.format("Rechazar prueba: No"));
+            sb.append(String.format("Rechazar prueba: No\n"));
         } else {
-            System.out.println(String.format("Rechazar prueba: Sí"));
+            sb.append(String.format("Rechazar prueba: Sí\n"));
         }
+        
+        return sb.toString();
     }
 }

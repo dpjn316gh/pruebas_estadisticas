@@ -32,6 +32,6 @@ public class FibonacciChiCuadradoPrueba {
             list.add(new BigDecimal(numero / 10000000));
 
         }
-        ChiCuadrado.probar(list, 0.05);
+        System.out.print(ChiCuadrado.probar(list, 0.05));
     }
 }
