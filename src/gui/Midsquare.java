@@ -281,10 +281,8 @@ public class Midsquare extends javax.swing.JFrame {
 
         Double tolerancia = new Double(jTextFieldITolerancia.getText());
         
-        jTextAreaResultado1.setText(ChiCuadrado.probar(list, 1, tolerancia));
-                                         
+        jTextAreaResultado1.setText(ChiCuadrado.probar(list, tolerancia));
 
-        
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed

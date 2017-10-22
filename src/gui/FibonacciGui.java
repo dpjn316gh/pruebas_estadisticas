@@ -314,7 +314,7 @@ public class FibonacciGui extends javax.swing.JFrame {
 
         Double tolerancia = new Double(jTextFieldITolerancia.getText());
         
-        jTextAreaResultado1.setText(ChiCuadrado.probar(list, 1, tolerancia));
+        jTextAreaResultado1.setText(ChiCuadrado.probar(list, tolerancia));
                                          
     }//GEN-LAST:event_jButton3ActionPerformed
 

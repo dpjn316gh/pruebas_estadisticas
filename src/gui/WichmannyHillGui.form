@@ -51,10 +51,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jButtonGenerar" min="-2" pref="111" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane4" min="-2" pref="437" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jScrollPane4" min="-2" pref="437" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
@@ -84,30 +81,31 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jLabelSemilla1" min="-2" pref="78" max="-2" attributes="0"/>
-                                          <Component id="jLabelSemilla" min="-2" pref="78" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextFieldSemilla" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldSemilla1" min="-2" pref="81" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldSemilla2" min="-2" pref="93" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Component id="jLabelResultado" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="jLabel11" min="-2" pref="192" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jLabelSemilla" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelSemilla1" min="-2" pref="115" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTextFieldSemilla1" min="-2" pref="81" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldSemilla2" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldSemilla" min="-2" pref="81" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="jLabelResultado" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="jLabel11" min="-2" pref="192" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jLabelSemilla2" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
                               <Component id="jLabelIteraciones" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jTextFieldIteraciones" min="-2" pref="93" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLabelSemilla2" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
+                          <Component id="jButtonGenerar" min="-2" pref="111" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -121,7 +119,7 @@
                       <Component id="jTextFieldITolerancia" min="-2" pref="145" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="62" max="32767" attributes="0"/>
+              <EmptySpace pref="41" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -143,14 +141,12 @@
                   <Component id="jTextFieldSemilla1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabelSemilla2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextFieldSemilla2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="jButtonGenerar" alignment="0" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelSemilla2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldSemilla2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonGenerar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="6" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="jLabelResultado" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jScrollPane4" min="-2" pref="139" max="-2" attributes="0"/>

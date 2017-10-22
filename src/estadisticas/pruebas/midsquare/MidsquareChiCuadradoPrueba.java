@@ -29,6 +29,6 @@ public class MidsquareChiCuadradoPrueba {
             double numero = m.numerosAleatorios.get(i);
             list.add(new BigDecimal(numero));
         }
-        ChiCuadrado.probar(list, 1, 0.05);
+        ChiCuadrado.probar(list, 0.05);
     }
 }

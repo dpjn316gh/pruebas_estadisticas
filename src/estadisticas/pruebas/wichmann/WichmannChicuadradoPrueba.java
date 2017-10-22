@@ -17,23 +17,23 @@ import java.util.List;
  * @author veronica
  */
 public class WichmannChicuadradoPrueba {
-    
+
     public static void main(String args[]) throws Exception {
 
         System.out.print("Iniciar");
         List<BigDecimal> list = new ArrayList<>();
-        
+
         WichmannyHill m = new WichmannyHill();
         m.inicial(2245, 4456, 3325, 10);
         m.generar();
-        
+
         for (int i = 0; i < m.numerosAleatorio.size(); i++) {
             double numero = m.numerosAleatorio.get(i);
             list.add(new BigDecimal(numero));
-            
-             }
-        
-        ChiCuadrado.probar(list, 1, 0.05);
-    
-}
+
+        }
+
+        ChiCuadrado.probar(list, 0.05);
+
+    }
 }
