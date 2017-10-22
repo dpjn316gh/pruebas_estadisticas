@@ -19,11 +19,15 @@ import org.apache.commons.math3.stat.inference.TestUtils;
  */
 public class ChiCuadrado {
 
-    public static String probar(List<BigDecimal> list, int limiteSuperior, double confianza) {
+    public static String probar(List<BigDecimal> list,  double confianza) {
 
         StringBuilder resultado = new StringBuilder();
 
         Collections.sort(list);
+        
+        BigDecimal max = Collections.max(list);
+                
+        int limiteSuperior = (int)Math.ceil(max.doubleValue());
 
         int n = list.size();
         double m = Math.sqrt(n);
