@@ -5,7 +5,11 @@
  */
 package gui;
 
+import estadisticas.metodos.ChiCuadrado;
 import generadores.MidsquareMethod;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import javax.naming.OperationNotSupportedException;
 import menu.Menu_Generadores;
 
@@ -58,7 +62,6 @@ public class Midsquare extends javax.swing.JFrame {
         jTextFieldITolerancia = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
 
         jButton2.setText("Promedio");
         jButton2.setActionCommand("jButton2 ");
@@ -141,14 +144,6 @@ public class Midsquare extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel12.setText("PRUEBAS ESTADISTICAS");
 
-        jButton7.setText("Volver");
-        jButton7.setName("volver"); // NOI18N
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -165,10 +160,6 @@ public class Midsquare extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton7)
-                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
@@ -242,9 +233,7 @@ public class Midsquare extends javax.swing.JFrame {
                 .addComponent(jLabelResultado2)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton7)
-                .addContainerGap())
+                .addGap(54, 54, 54))
         );
 
         pack();
@@ -284,6 +273,18 @@ public class Midsquare extends javax.swing.JFrame {
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
+         List<BigDecimal> list = new ArrayList<>();
+        for (int i = 0; i < p.numerosAleatorios.size(); i++) {
+            double numero = p.numerosAleatorios.get(i);
+            list.add(new BigDecimal(numero));
+        }
+
+        Double tolerancia = new Double(jTextFieldITolerancia.getText());
+        
+        jTextAreaResultado1.setText(ChiCuadrado.probar(list, 1, tolerancia));
+                                         
+
+        
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -291,12 +292,6 @@ public class Midsquare extends javax.swing.JFrame {
         Menu_Generadores Volver  = new Menu_Generadores();
         Volver.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-        Menu_Generadores Volver  = new Menu_Generadores();
-        Volver.setVisible(true);
-    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -343,7 +338,6 @@ public class Midsquare extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButtonGenerar;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

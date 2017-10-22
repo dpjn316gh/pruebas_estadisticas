@@ -5,8 +5,12 @@
  */
 package gui;
 
+import estadisticas.metodos.ChiCuadrado;
 import generadores.CongruencialMixto;
 import generadores.MetodoInicial;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import menu.Menu_Generadores;
 
 /**
@@ -320,7 +324,16 @@ public class Mixto extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
+      // TODO add your handling code here:
+         List<BigDecimal> list = new ArrayList<>();
+        for (int i = 0; i < p.numeroAleatorio.size(); i++) {
+            double numero = p.numeroAleatorio.get(i);
+            list.add(new BigDecimal(numero));
+        }
+
+        Double tolerancia = new Double(jTextFieldITolerancia.getText());
+        
+        jTextAreaResultado1.setText(ChiCuadrado.probar(list, 1, tolerancia));                                     
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
