@@ -6,6 +6,9 @@
 package gui;
 
 import generadores.MetodoInicial;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import menu.Menu_Generadores;
@@ -125,13 +128,13 @@ public class Generador_Basico extends javax.swing.JFrame {
         });
 
         jButton12.setText("Varianza");
-
-        jButton13.setText("Kolmogorov-Smirnov");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                jButton12ActionPerformed(evt);
             }
         });
+
+        jButton13.setText("Kolmogorov-Smirnov");
 
         jLabel10.setText("Tolerancia");
 
@@ -334,6 +337,11 @@ public class Generador_Basico extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton13ActionPerformed
 
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+         
+    }//GEN-LAST:event_jButton12ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -359,6 +367,8 @@ public class Generador_Basico extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Generador_Basico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
