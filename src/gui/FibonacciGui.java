@@ -22,7 +22,7 @@ import menu.Menu_Generadores;
 public class FibonacciGui extends javax.swing.JFrame {
     
     private Fibonacci p = new Fibonacci();
-
+    Long modulo;
     /**
      * Creates new form FibonacciGui
      */
@@ -297,7 +297,7 @@ public class FibonacciGui extends javax.swing.JFrame {
             
             Long n0 = new Long(jTextFieldN0.getText());
             Long n1 = new Long(jTextFieldN1.getText());
-            Long modulo = new Long(jTextFieldModulus.getText());
+            modulo = new Long(jTextFieldModulus.getText());
             Integer iteraciones = new Integer(jTextFieldIteraciones.getText());
                       
             p.inicio(n0, n1, modulo, operacion, iteraciones);
@@ -320,7 +320,7 @@ public class FibonacciGui extends javax.swing.JFrame {
          List<BigDecimal> list = new ArrayList<>();
         for (int i = 0; i < p.numerosAleatorios.size(); i++) {
             double numero = p.numerosAleatorios.get(i);
-            list.add(new BigDecimal(numero / 10000000));
+            list.add(new BigDecimal(numero / modulo));
         }
 
         Double tolerancia = new Double(jTextFieldITolerancia.getText());
@@ -344,9 +344,9 @@ public class FibonacciGui extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         List<BigDecimal> list = new ArrayList<>();
-        for (int i = 0; i < p.numerosAleatorio.size(); i++) {
-            double numero = p.numerosAleatorio.get(i);
-            list.add(new BigDecimal(numero));
+        for (int i = 0; i < p.numerosAleatorios.size(); i++) {
+            double numero = p.numerosAleatorios.get(i);
+            list.add(new BigDecimal(numero / modulo));
         }
 
         Double tolerancia = new Double(jTextFieldITolerancia.getText());
@@ -357,9 +357,9 @@ public class FibonacciGui extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
                  List<BigDecimal> list = new ArrayList<>();
-        for (int i = 0; i < p.numerosAleatorio.size(); i++) {
-            double numero = p.numerosAleatorio.get(i);
-            list.add(new BigDecimal(numero));
+        for (int i = 0; i < p.numerosAleatorios.size(); i++) {
+            double numero = p.numerosAleatorios.get(i);
+            list.add(new BigDecimal(numero / modulo));
         }
         Double tolerancia = new Double(jTextFieldITolerancia.getText());
         

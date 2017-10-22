@@ -29,8 +29,8 @@ public class WichmannChicuadradoPrueba {
 
         for (int i = 0; i < m.numerosAleatorio.size(); i++) {
             double numero = m.numerosAleatorio.get(i);
-            list.add(new BigDecimal(numero));
-
+            int entero = (int)numero;
+            list.add(new BigDecimal(numero - entero));
         }
 
         ChiCuadrado.probar(list, 0.05);

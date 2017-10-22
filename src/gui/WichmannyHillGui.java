@@ -15,14 +15,15 @@ import java.util.Collections;
 import java.util.List;
 import javax.naming.OperationNotSupportedException;
 import menu.Menu_Generadores;
+
 /**
  *
  * @author Verónica Cortes / Jazmin Patiño
  */
 public class WichmannyHillGui extends javax.swing.JFrame {
 
-    
     private WichmannyHill p = new WichmannyHill();
+
     /**
      * Creates new form WichmannyHillGui
      */
@@ -272,7 +273,7 @@ public class WichmannyHillGui extends javax.swing.JFrame {
             Long semillaZ = new Long(jTextFieldSemilla2.getText());
             Integer iteraciones = new Integer(jTextFieldIteraciones.getText());
 
-            p.inicial(semillaX, semillaY, semillaZ,iteraciones);
+            p.inicial(semillaX, semillaY, semillaZ, iteraciones);
 
             p.generar();
 
@@ -285,7 +286,7 @@ public class WichmannyHillGui extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        Menu_Generadores Volver  = new Menu_Generadores();
+        Menu_Generadores Volver = new Menu_Generadores();
         Volver.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -300,38 +301,47 @@ public class WichmannyHillGui extends javax.swing.JFrame {
         for (int i = 0; i < p.numerosAleatorio.size(); i++) {
             double numero = p.numerosAleatorio.get(i);
             list.add(new BigDecimal(numero));
+            int entero = (int) numero;
+            list.add(new BigDecimal(numero - entero));
+
         }
 
         Double tolerancia = new Double(jTextFieldITolerancia.getText());
-                
-        jTextAreaResultado1.setText(ChiCuadrado.probar(list, tolerancia));        
+
+        jTextAreaResultado1.setText(ChiCuadrado.probar(list, tolerancia));
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
-                List<BigDecimal> list = new ArrayList<>();
+        List<BigDecimal> list = new ArrayList<>();
         for (int i = 0; i < p.numerosAleatorio.size(); i++) {
             double numero = p.numerosAleatorio.get(i);
             list.add(new BigDecimal(numero));
+            int entero = (int) numero;
+            list.add(new BigDecimal(numero - entero));
+
         }
 
         Double tolerancia = new Double(jTextFieldITolerancia.getText());
-        
+
         jTextAreaResultado1.setText(KolmogorovSmirnov.probar(list, tolerancia));
 
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
-              List<BigDecimal> list = new ArrayList<>();
+        List<BigDecimal> list = new ArrayList<>();
         for (int i = 0; i < p.numerosAleatorio.size(); i++) {
             double numero = p.numerosAleatorio.get(i);
             list.add(new BigDecimal(numero));
+            int entero = (int) numero;
+            list.add(new BigDecimal(numero - entero));
+
         }
 
         Double tolerancia = new Double(jTextFieldITolerancia.getText());
-        
-        jTextAreaResultado1.setText(VarianzaPrueba.probar(list, tolerancia));                                    
+
+        jTextAreaResultado1.setText(VarianzaPrueba.probar(list, tolerancia));
     }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
