@@ -29,16 +29,21 @@ public class PruebaPromedios {
         int n = list.size();
 
         double promedio = suma / n;
-        System.out.println("promedio:" + promedio);
+                            
         
         //double valorZ = confianza / 2;
 
         NormalDistribution nd = new NormalDistribution();
-        System.out.print("valor tabla:");
+        
         double valorZ = (nd.inverseCumulativeProbability(1 - confianza / 2));
 
         double limiteIzq = ((1 / 2) - valorZ) * (1 / (Math.sqrt(12 * n)));
         double limiteDer = ((1 / 2) + valorZ) * (1 / (Math.sqrt(12 * n)));
+        
+        sb.append(String.format("Promedio %f\n", promedio));
+        sb.append(String.format("limiteIzquierdo: %f\n", limiteIzq));
+        sb.append(String.format("limiteDerecho: %f\n", limiteDer));
+        
 
         if (limiteIzq > limiteDer) {
             double t = limiteIzq;
