@@ -18,22 +18,21 @@ public class PruebaPromedios {
     public static String probar(List<BigDecimal> list, double confianza) {
 
         StringBuilder sb = new StringBuilder();
-
+        
+        double suma = 0;
         double[] valores = new double[list.size()];
         for (int i = 0; i < list.size(); i++) {
             BigDecimal get = list.get(i);
             valores[i] = get.doubleValue();
+            suma += valores[i];
         }
         int n = list.size();
-
-        double suma = 0;
-        suma += valores;
 
         double promedio = suma / n;
         double valorZ = confianza / 2;
 
         NormalDistribution nd = new NormalDistribution();
-        System.out.println(nd.inverseCumulativeProbability(1 - 0.05 / 2));
+        System.out.println(nd.inverseCumulativeProbability(1 - confianza / 2));
 
         double limiteIzq = ((1 / 2) - valorZ) * (1 / (Math.sqrt(12 * n)));
         double limiteDer = ((1 / 2) + valorZ) * (1 / (Math.sqrt(12 * n)));
