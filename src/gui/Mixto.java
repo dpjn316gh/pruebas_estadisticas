@@ -7,6 +7,8 @@ package gui;
 
 import estadisticas.metodos.ChiCuadrado;
 import estadisticas.metodos.KolmogorovSmirnov;
+import estadisticas.metodos.PruebaPromedios;
+import estadisticas.metodos.VarianzaPrueba;
 import generadores.CongruencialMixto;
 import generadores.MetodoInicial;
 import java.math.BigDecimal;
@@ -332,6 +334,17 @@ public class Mixto extends javax.swing.JFrame {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+      List<BigDecimal> list = new ArrayList<>();
+        for (int i = 0; i < p.numeroAleatorio.size(); i++) {
+            double numero = p.numeroAleatorio.get(i);
+            list.add(new BigDecimal(numero));
+        }
+
+        Double tolerancia = new Double(jTextFieldITolerancia.getText());
+        
+        jTextAreaResultado1.setText(PruebaPromedios.probar(list, tolerancia));       
+        
+        
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
@@ -355,7 +368,7 @@ public class Mixto extends javax.swing.JFrame {
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
-                List<BigDecimal> list = new ArrayList<>();
+        List<BigDecimal> list = new ArrayList<>();
         for (int i = 0; i < p.numeroAleatorio.size(); i++) {
             double numero = p.numeroAleatorio.get(i);
             list.add(new BigDecimal(numero));
@@ -369,6 +382,16 @@ public class Mixto extends javax.swing.JFrame {
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
+     List<BigDecimal> list = new ArrayList<>();
+        for (int i = 0; i < p.numeroAleatorio.size(); i++) {
+            double numero = p.numeroAleatorio.get(i);
+            list.add(new BigDecimal(numero));
+        }
+
+        Double tolerancia = new Double(jTextFieldITolerancia.getText());
+        
+        jTextAreaResultado1.setText(VarianzaPrueba.probar(list, tolerancia));   
+        
     }//GEN-LAST:event_jButton12ActionPerformed
 
     /**

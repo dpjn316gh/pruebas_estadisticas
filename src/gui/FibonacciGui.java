@@ -8,6 +8,7 @@ package gui;
 import estadisticas.metodos.ChiCuadrado;
 import estadisticas.metodos.VarianzaPrueba;
 import estadisticas.metodos.KolmogorovSmirnov;
+import estadisticas.metodos.PruebaPromedios;
 import generadores.Fibonacci;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -313,6 +314,17 @@ public class FibonacciGui extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        List<BigDecimal> list = new ArrayList<>();
+        for (int i = 0; i < p.numerosAleatorios.size(); i++) {
+            double numero = p.numerosAleatorios.get(i);
+            list.add(new BigDecimal(numero / modulo));
+        }
+
+        Double tolerancia = new Double(jTextFieldITolerancia.getText());
+        
+        jTextAreaResultado1.setText(PruebaPromedios.probar(list, tolerancia));
+        
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

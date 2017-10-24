@@ -8,6 +8,7 @@ package gui;
 import estadisticas.metodos.ChiCuadrado;
 import estadisticas.metodos.KolmogorovSmirnov;
 import estadisticas.metodos.VarianzaPrueba;
+import estadisticas.metodos.PruebaPromedios;
 import generadores.WichmannyHill;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -292,6 +293,19 @@ public class WichmannyHillGui extends javax.swing.JFrame {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+     List<BigDecimal> list = new ArrayList<>();
+        for (int i = 0; i < p.numerosAleatorio.size(); i++) {
+            double numero = p.numerosAleatorio.get(i);
+            list.add(new BigDecimal(numero));
+            int entero = (int) numero;
+            list.add(new BigDecimal(numero - entero));
+
+        }
+
+        Double tolerancia = new Double(jTextFieldITolerancia.getText());
+
+        jTextAreaResultado1.setText(PruebaPromedios.probar(list, tolerancia));    
+        
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
