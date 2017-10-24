@@ -29,9 +29,12 @@ public class PruebaPromedios {
         int n = list.size();
 
         double promedio = suma / n;
+        System.out.println("promedio:" + promedio);
+        
         double valorZ = confianza / 2;
 
         NormalDistribution nd = new NormalDistribution();
+        System.out.print("valor tabla:");
         System.out.println(nd.inverseCumulativeProbability(1 - confianza / 2));
 
         double limiteIzq = ((1 / 2) - valorZ) * (1 / (Math.sqrt(12 * n)));
